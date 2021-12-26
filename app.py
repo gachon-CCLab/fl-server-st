@@ -34,9 +34,9 @@ def update_item(Se: ServerStatus):
     return {"Server_Status": FLSe}
 
 @app.put("/FLSe/FLSeReady")
-def update_item(Se: bool):
+def update_item(i: bool):
     global FLSe
-    FLSe.FLSeReady = Se
+    FLSe.FLSeReady = i
     return {"Server_Status": FLSe}
 
 
