@@ -33,6 +33,13 @@ def update_item(Se: ServerStatus):
     FLSe = Se
     return {"Server_Status": FLSe}
 
+@app.put("/FLSe/FLSeReady")
+def update_item(Se: bool):
+    global FLSe
+    FLSe.FLSeReady = Se
+    return {"Server_Status": FLSe}
+
+
 
 if __name__ == "__main__":
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
