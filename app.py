@@ -28,13 +28,13 @@ def read_status():
 
 
 @app.put("/FLSe/FLSeUpdate")
-def update_item(Se: ServerStatus):
+def update_status(Se: ServerStatus):
     global FLSe
     FLSe = Se
     return {"Server_Status": FLSe}
 
 @app.put("/FLSe/FLSeReady")
-def update_item(i: bool):
+def update_ready(i: bool):
     global FLSe
     FLSe.FLSeReady = i
     return {"Server_Status": FLSe}
