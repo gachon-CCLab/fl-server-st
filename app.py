@@ -10,6 +10,7 @@ class ServerStatus(BaseModel):
     S3_bucket: str = 'ccl-fl-demo-model'
     S3_key: str = 'model.h5'  # 모델 가중치 파일 이름
     FLSeReady: bool = False
+    Model_V: int = 0 #모델버전 
 
 
 app = FastAPI()
@@ -37,6 +38,8 @@ def update_status(Se: ServerStatus):
 def update_ready(i: bool):
     global FLSe
     FLSe.FLSeReady = i
+    if i==False:
+        FLSe.Model_V += 1
     return {"Server_Status": FLSe}
 
 
