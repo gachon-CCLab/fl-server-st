@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server-status-informer
-          image: docker.io/hoo0681/gitclone_python:0.1
+          image: docker.io/kumass2020/fl-server-st-repl:1.0
           resources:
             limits:
               memory: "2Gi"
@@ -23,6 +23,6 @@ spec:
             - containerPort: 8000
           env:
           - name: REPO_URL
-            value: "https://github.com/hoo0681/flserverST.git"
+            value: "https://github.com/kumass2020/fl-server-st.git"
           - name: GIT_TAG
             value: "main"
