@@ -23,6 +23,6 @@ spec:
             - containerPort: 8000
           env:
           - name: REPO_URL
-            value: "https://github.com/kumass2020/fl-server-st.git"
+            value: "https://github.com/gachon-CCLab/fl-server-st.git"
           - name: GIT_TAG
             value: "main"
